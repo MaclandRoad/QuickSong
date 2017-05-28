@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -18,6 +19,8 @@ namespace QuickSong
         public FrmMain()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.indexes == null)
+                Properties.Settings.Default.indexes = new StringCollection();
             PpTools.Setup();
 
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
