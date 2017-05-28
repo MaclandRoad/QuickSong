@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\PpTools.cs" />
     <Compile Include="FrmIndexes.cs">
       <SubType>Form</SubType>
     </Compile>
