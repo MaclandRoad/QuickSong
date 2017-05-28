@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace QuickSong
 {
-    public partial class FrmMain : Form
+    public partial class FrmIndexes : Form
     {
-        public FrmMain()
+        public FrmIndexes()
         {
             InitializeComponent();
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnIndexes_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
