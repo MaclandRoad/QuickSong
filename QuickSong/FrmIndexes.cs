@@ -39,9 +39,9 @@ namespace QuickSong
             listBox1.Items.Add(dialog.SelectedPath);
         }
 
-        public void SaveItems()
+        private void SaveItems()
         {
-            Properties.Settings.Default.indexes = new StringCollection();
+            Properties.Settings.Default.indexes = new StringCollection(); // clear to prevent duplication of list
             foreach (string s in listBox1.Items)
             {
                 Properties.Settings.Default.indexes.Add(s);

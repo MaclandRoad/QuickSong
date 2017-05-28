@@ -32,6 +32,7 @@
             this.BtnIndexes = new System.Windows.Forms.ToolStripLabel();
             this.BtnSettings = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.BtnSettings});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(400, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(532, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -65,11 +66,21 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(61, 28);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(459, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 162);
+            this.ClientSize = new System.Drawing.Size(532, 149);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FrmMain";
             this.Text = "QuickSong";
@@ -87,6 +98,7 @@
         private System.Windows.Forms.ToolStripLabel BtnIndexes;
         private System.Windows.Forms.ToolStripLabel BtnSettings;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

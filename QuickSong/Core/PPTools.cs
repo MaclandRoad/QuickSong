@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -62,6 +63,16 @@ namespace QuickSong.Core
                 Environment.Exit(0);
             }
             SetPpPath(ppPath);
+        }
+
+        public static void LaunchPowerpoint(string ppPath)
+        {
+            ProcessStartInfo info = new ProcessStartInfo
+            {
+                Arguments = "\"" + ppPath + "\"",
+                FileName = Properties.Settings.Default.PpPath
+            };
+            Process.Start(info);
         }
 
     }
