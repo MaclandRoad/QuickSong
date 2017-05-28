@@ -1,6 +1,6 @@
 ﻿namespace QuickSong
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(400, 162);
+            this.Name = "FrmMain";
+            this.Text = "QuickSong";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
