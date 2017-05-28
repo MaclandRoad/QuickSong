@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuickSong.Core;
 
 namespace QuickSong
 {
@@ -24,7 +25,8 @@ namespace QuickSong
 
         private void BtnIndexes_Click(object sender, EventArgs e)
         {
-
+            PpTools.Setup();
+            new FrmIndexes().Show();
         }
     }
 }

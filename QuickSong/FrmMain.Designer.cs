@@ -30,13 +30,17 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnIndexes = new System.Windows.Forms.ToolStripLabel();
+            this.BtnSettings = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnIndexes});
+            this.BtnIndexes,
+            this.toolStripSeparator1,
+            this.BtnSettings});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(400, 25);
@@ -49,6 +53,17 @@
             this.BtnIndexes.Size = new System.Drawing.Size(46, 22);
             this.BtnIndexes.Text = "Indexes";
             this.BtnIndexes.Click += new System.EventHandler(this.BtnIndexes_Click);
+            // 
+            // BtnSettings
+            // 
+            this.BtnSettings.Name = "BtnSettings";
+            this.BtnSettings.Size = new System.Drawing.Size(49, 22);
+            this.BtnSettings.Text = "Settings";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // FrmMain
             // 
@@ -70,6 +85,8 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel BtnIndexes;
+        private System.Windows.Forms.ToolStripLabel BtnSettings;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
