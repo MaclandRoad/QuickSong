@@ -26,7 +26,7 @@ namespace QuickSong
             {
                 if(string.IsNullOrEmpty(indx))
                     continue;
-                foreach (var ppFile in Directory.GetFiles(indx, "*.pp?x"))
+                foreach (var ppFile in Directory.GetFiles(indx, "*.pp?x", SearchOption.AllDirectories))
                 {
                     PpFileItem fileitem = new PpFileItem
                     {
