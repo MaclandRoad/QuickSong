@@ -11,6 +11,7 @@ namespace QuickSong.Core
         private static void SetPpPath(string path)
         {
             Properties.Settings.Default.PpPath = path;
+            Properties.Settings.Default.Save();
         }
 
         private static string GetPpPath()
