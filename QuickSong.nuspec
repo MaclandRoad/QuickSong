@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>QuickSong</id>
+        <version>1.0.0</version>
+        <title>QuickSong</title>
+        <authors>Hunter</authors>
+        <owners>judge2020</owners>
+        <projectUrl>http://maclandroadchurchofchrist.org</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>QuickSong</description>
+    </metadata>
+    <files>
+        <file src="QuickSong\bin\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+        <file src="QuickSong\bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+        <file src="QuickSong\bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+        <file src="QuickSong\bin\Release\ICSharpCode.SharpZipLib.dll" target="lib\net45\ICSharpCode.SharpZipLib.dll" />
+        <file src="QuickSong\bin\Release\ICSharpCode.SharpZipLib.xml" target="lib\net45\ICSharpCode.SharpZipLib.xml" />
+        <file src="QuickSong\bin\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+        <file src="QuickSong\bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+        <file src="QuickSong\bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+        <file src="QuickSong\bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+        <file src="QuickSong\bin\Release\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+        <file src="QuickSong\bin\Release\Ookii.Dialogs.Wpf.dll" target="lib\net45\Ookii.Dialogs.Wpf.dll" />
+        <file src="QuickSong\bin\Release\Ookii.Dialogs.Wpf.xml" target="lib\net45\Ookii.Dialogs.Wpf.xml" />
+        <file src="QuickSong\bin\Release\QuickSong.exe" target="lib\net45\QuickSong.exe" />
+        <file src="QuickSong\bin\Release\QuickSong.exe.config" target="lib\net45\QuickSong.exe.config" />
+        <file src="QuickSong\bin\Release\Splat.dll" target="lib\net45\Splat.dll" />
+        <file src="QuickSong\bin\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+    </files>
+</package>
