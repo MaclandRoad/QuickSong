@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ookii.Dialogs.Wpf;
+using Squirrel;
 
 namespace QuickSong
 {
@@ -52,6 +53,8 @@ namespace QuickSong
         private void FrmIndexes_FormClosing(object sender, FormClosingEventArgs e)
         {
             SaveItems();
+            Application.Restart();
+            Environment.Exit(0);
         }
 
         private void button2_Click(object sender, EventArgs e)
