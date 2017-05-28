@@ -34,5 +34,16 @@ namespace QuickSong.Properties {
                 this["PpPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection indexes {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["indexes"]));
+            }
+            set {
+                this["indexes"] = value;
+            }
+        }
     }
 }

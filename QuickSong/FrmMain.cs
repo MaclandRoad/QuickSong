@@ -16,6 +16,7 @@ namespace QuickSong
         public FrmMain()
         {
             InitializeComponent();
+            PpTools.Setup();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -25,7 +26,6 @@ namespace QuickSong
 
         private void BtnIndexes_Click(object sender, EventArgs e)
         {
-            PpTools.Setup();
             new FrmIndexes().Show();
         }
     }
