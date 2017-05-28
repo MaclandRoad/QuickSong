@@ -29,9 +29,14 @@ namespace QuickSong
         private void button1_Click(object sender, EventArgs e)
         {
             VistaFolderBrowserDialog dialog = new VistaFolderBrowserDialog();
-            dialog.Description = "Add a location to search";
+            dialog.Description = "Add a location to search for Powerpoint files";
             dialog.ShowDialog();
-            var item = listBox1.Items.Add(dialog.SelectedPath);
+            if(listBox1.Items.Contains(dialog.SelectedPath))
+            {
+                MessageBox.Show("Already added!");
+                return;
+            }
+            listBox1.Items.Add(dialog.SelectedPath);
         }
 
         public void SaveItems()
