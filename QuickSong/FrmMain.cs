@@ -65,6 +65,7 @@ namespace QuickSong
                 return;
             var myFile = _ppFiles.FirstOrDefault(x => x.FileName.ToLower() == textBox1.Text.ToLower());
             PpTools.LaunchPowerpoint(myFile?.FullPath);
+            textBox1.Clear();
         }
     }
 
