@@ -43,6 +43,7 @@ namespace QuickSong
                 }
             }
             textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            label1.Text = "v" + typeof(Program).Assembly.GetName().Version.ToString();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -66,6 +67,11 @@ namespace QuickSong
             var myFile = _ppFiles.FirstOrDefault(x => x.FileName.ToLower() == textBox1.Text.ToLower());
             PpTools.LaunchPowerpoint(myFile?.FullPath);
             textBox1.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
