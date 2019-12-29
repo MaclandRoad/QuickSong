@@ -19,16 +19,38 @@ namespace QuickSong
         public FrmMain()
         {
             InitializeComponent();
-            if (Properties.Settings.Default.indexes == null)
-                Properties.Settings.Default.indexes = new StringCollection();
             PpTools.Setup();
 
+
+            if (Properties.Settings.Default.indexes == null)
+                Properties.Settings.Default.indexes = new StringCollection();
+
+            PopulateFiles();
+
+            label1.Text = "v" + typeof(Program).Assembly.GetName().Version.ToString();
+        }
+
+        private void PopulateFiles()
+        {
             textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
             textBox1.AutoCompleteCustomSource = new AutoCompleteStringCollection();
             foreach (var indx in Properties.Settings.Default.indexes)
             {
-                if(string.IsNullOrEmpty(indx))
+                if (string.IsNullOrEmpty(indx))
                     continue;
+                try
+                {
+                    if (!Directory.Exists(indx))
+                    {
+                        MessageBox.Show("directory \"" + indx + "\" does not exist. Check that you have permission to access the folder, the drive is mounted, and the folder was not deleted.", "QuickSong");
+                        continue;
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("directory \"" + indx + "\" does not exist. Check that you have permission to access the folder, the drive is mounted, and the folder was not deleted.", "QuickSong");
+                    continue;
+                }
                 foreach (var ppFile in Directory.GetFiles(indx, "*.pp?x", SearchOption.AllDirectories))
                 {
                     PpFileItem fileitem = new PpFileItem
@@ -43,7 +65,6 @@ namespace QuickSong
                 }
             }
             textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            label1.Text = "v" + typeof(Program).Assembly.GetName().Version.ToString();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
